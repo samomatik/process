@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Process Checklist</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+
+  <style>
+    body {
+      font-size: 0.8em;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .checklist {
+      width: 40%;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 auto;
+    }
+
+    .notes {
+      width: 59%;
+      height:inherit;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 auto;
+      padding: 0 10px 0 0;
+    }
+
+    .reference {
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 480px;
+      resize: none;
+    }
+
+    h6 {
+      margin: auto 0;
+      padding-top: 3px;
+      text-align: center;
+
+    }
+
+    .select {
+      background-color: rgb(255, 101, 101);
+      border-radius: 2px;
+      margin: 1px;
+      padding: 3px;
+      text-align: center;
+    }
+
+    .done {
+      background-color: rgb(101, 255, 121);
+    }
+
+    .clear {
+      padding: 3px;
+      margin: 3px;
+      width: 100%;
+    }
+
+    .outcomes {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .refButton {
+      margin: 2px;
+    }
+
+  </style>
+
+  <script>
+    $(document).ready(function() {
+      $(".select").click(function() {
+        $(this).toggleClass("done");
+      });
+
+      $(".clear").click(function() {
+        $(".select").removeClass("done");
+        $("textarea").val('');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <script src="bootstrap.min.js"></script>
+  <div class="container checklist">
+
+    <h6>Call Opening</h6>
+    <div class="row">
+      <div class="col select">
+        Authentication
+      </div>
+      <div class="col select">
+        High Risk
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Disclaimer
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Contacts
+      </div>
+    </div>
+
+    <h6>Know Your Customer</h6>
+    <div class="row">
+      <div class="col select">
+        Advise Arrears
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Gain RFD
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Review History
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Assess Future Payments
+      </div>
+    </div>
+
+    <h6>Solutions</h6>
+    <div class="row">
+      <div class="col select">
+        CIP/DDR/SMS Alerts
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Advise Outcomes
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Realistic Solution for All Accounts
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Advice Next Due Date/Amount
+      </div>
+    </div>
+
+    <h6>Call Closure</h6>
+    <div class="row">
+      <div class="col select">
+        Recap
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        NPS
+      </div>
+    </div>
+    <div class="row">
+      <div class="col select">
+        Memo
+      </div>
+    </div>
+
+    <div>
+      <button class="btn btn-sm btn-success clear">Clear</button>
+    </div>
+  </div>
+
+  <div class="container notes">
+    <h6>Notes</h6>
+      <textarea></textarea>
+  </div>
+
+  <div class="container reference">
+    <h6>Outcomes</h6>
+
+    <div class="row outcomes">
+      <div class="col">
+      <button type="button" class="btn btn-sm btn-primary refButton" data-toggle="modal" data-target="#ccModal">
+        Credit Cards
+      </button>
+      <button type="button" class="btn btn-sm btn-primary refButton" data-toggle="modal" data-target="#plModal">
+        Personal Loans
+      </button>
+      <button type="button" class="btn btn-sm btn-primary refButton" data-toggle="modal" data-target="#hl1Modal">
+        Home Loans - P&I/IO
+      </button>
+      <button type="button" class="btn btn-sm btn-primary refButton" data-toggle="modal" data-target="#hl2Modal">
+        Home Loans - LOC
+      </button>
+      <button type="button" class="btn btn-sm btn-primary refButton" data-toggle="modal" data-target="#taModal">
+        Transaction Accounts
+      </button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+<!-- Credit Card Outcome Modal -->
+<div class="modal fade" id="ccModal" tabindex="-1" role="dialog" aria-labelledby="ccModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Credit Card Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong>Class: BNK</strong>
+          <p>
+            $15 Late Payment Fee
+          <br />
+            No Further Use/Restricted
+          <br />
+            Further Calls & Letters
+          </p>
+        </div>
+
+        <div>
+          <strong>Class: BCS (20+ Days Irregular)</strong>
+          <p>
+            $15 Late Payment Fee
+          <br />
+            No Further Use/Restricted
+          <br />
+            Further Calls & Letters
+            <br />
+            Default Notice (Use profiling before utilising)
+          </p>
+        </div>
+
+        <div>
+          <strong>Class: SOLS</strong>
+          <p>
+            $15 Late Payment Fee
+          <br />
+            No Further Use/Restricted
+          <br />
+            Further Calls & Letters
+            <br />
+            Default Notice
+          </p>
+        </div>
+
+        <div>
+          <strong>Class: PDEF/PPDEF</strong>
+          <p>
+            Confirm a Default Notice has been issued
+          <br />
+            Demand Notice
+          <br />
+            Account Closure
+            <br />
+            Credit Listing
+            <br />
+            Refer to Care Partner
+            <br  />
+            Bad Nab Rating
+            <br />
+            <strong>State payment due, but do NOT proactively ask for arrears when a Default Notice has been issued (PDEF)</strong>
+            <br />
+            Ask for arrears when a payment has been made after Default Notice issued (PPDEF)
+          </p>
+        </div>
+
+        <div>
+          <strong>Class: FHA / B2 Block / OB1 OB2 Displays "Care Partner Name" / Account does not appear to be in B2k but does in DM</strong>
+          <p>
+            Refer customer to relevant Care Partner unless customer requests hardship or for sensitive and complex cases.
+          </p>
+        </div>
+
+        <div>
+          <strong>Default Notice Scripting</strong>
+          <p>
+            A notice that gives you 31 days to bring account back up to date. If its not up to date by then further action may be taken on the account.
+          </p>
+          <strong>Demand Notice Scripting</strong>
+          <p>
+            Once a demand notice is issued the full balance is due and payable within 7 days of as of date of issue of letter. If the balance is not paid in full the account may be referred to a care partner and you may be credit listed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Personal Loan Outcome Modal -->
+<div class="modal fade" id="plModal" tabindex="-1" role="dialog" aria-labelledby="plModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Personal Loan Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong>0 - 14 Days Irregular</strong>
+          <p>
+            $35 Default Fee
+          <br />
+            Further Calls & Letters
+          </p>
+        </div>
+
+        <div>
+          <strong>15 - 60 Days Irregular</strong>
+          <p>
+            $35 Default Fee
+          <br />
+            Further Calls & Letters
+            <br />
+            Default Notice
+          </p>
+        </div>
+
+        <div>
+          <strong>Default Notice Sent (PDEF)</strong>
+          <p>
+            $35 Late Payment Fee
+          <br />
+            Demand Notice
+          <br />
+            Account Closure
+            <br />
+            Credit Listing
+            <br />
+            Refer to Care Partner
+            <br  />
+            Impact Future Lending
+            <br />
+            <strong>Do NOT ask for arrears if Default Notice has been issued.</strong>
+            <br />
+            Ask for arrears when a payment has been made after Default Notice issued (PPDEF)
+          </p>
+        </div>
+
+        <div>
+          <strong>Demand Notice Issued / Referred to Care Partner</strong>
+          <p>
+            Refer customer to relevant Care Partner unless sensitive and complex case or customer requests hardship.
+          </p>
+        </div>
+
+        <div>
+          <strong>Default Notice Scripting</strong>
+          <p>
+            A notice that gives you 31 days to bring account back up to date. If its not up to date by then further action may be taken on the account.
+          </p>
+          <strong>Demand Notice Scripting</strong>
+          <p>
+            Once a demand notice is issued the full balance is due and payable within 7 days of as of date of issue of letter. If the balance is not paid in full the account may be referred to a care partner and you may be credit listed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Home Loan - Principal & Interest and Interest Only Outcome Modal -->
+<div class="modal fade" id="hl1Modal" tabindex="-1" role="dialog" aria-labelledby="hl1ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">P&I and IO Home Loan Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong>Pre-Default Notice, 0 - 20 Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            Impact to future lending
+          </p>
+        </div>
+
+        <div>
+          <strong>Pre-Default Notice, 20+ Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            Impact to future lending
+          <br />
+            Default Notice
+          </p>
+        </div>
+
+        <div>
+          <strong>Post Default Notice</strong>
+          <p>
+            <strong>Do NOT ask for arrears if Default Notice has been issued.</strong>
+          <br />
+            Ask for arrears when a payment has been made after Default Notice issued (PPDEF)
+          </p>
+          <p>
+            Referral to Secured Recoveries
+            <br />
+            Further enforcement action (If asked for clarification can discuss Demand Notice.)
+          </p>
+        </div>
+
+        <div>
+          <strong>Recoveries</strong>
+          <p>
+            Transfer call to Secured Solutions
+          </p>
+        </div>
+
+        <div>
+          <strong>Default Notice Scripting</strong>
+          <p>
+            A notice that gives you 31 days to bring account back up to date. If its not up to date by then further action may be taken on the account.
+          </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Home Loan - Line of Credit Outcome Modal -->
+<div class="modal fade" id="hl2Modal" tabindex="-1" role="dialog" aria-labelledby="hl2ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Line of Credit Home Loan Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong>Pre-Default Notice, 0 - 20 Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            No further use of Credit Facility
+          </p>
+        </div>
+
+        <div>
+          <strong>Pre-Default Notice, 20+ Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            No further use of Credit Facility
+          <br  />
+            Potential impact to future lending
+          <br />
+            Default Notice
+          </p>
+        </div>
+
+        <div>
+          <strong>Post Default Notice</strong>
+          <p>
+            <strong>Do NOT ask for arrears if Default Notice has been issued.</strong>
+          <br />
+            Ask for arrears when a payment has been made after Default Notice issued (PPDEF)
+          </p>
+          <p>
+            No further use of Credit Facility
+            <br />
+            Referral to Secured Recoveries
+            <br />
+            Further enforcement action (If asked for clarification can discuss Demand Notice.)
+          </p>
+        </div>
+
+        <div>
+          <strong>Recoveries</strong>
+          <p>
+            Transfer call to Secured Solutions
+          </p>
+        </div>
+
+        <div>
+          <strong>Default Notice Scripting</strong>
+          <p>
+            A notice that gives you 31 days to bring account back up to date. If its not up to date by then further action may be taken on the account.
+          </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Transaction Account Outcome Modal -->
+<div class="modal fade" id="taModal" tabindex="-1" role="dialog" aria-labelledby="taModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Transaction Account Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <strong>0 - 30 Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            Debit Interest (Calculated Daily, Charged End of Month)
+          </p>
+        </div>
+
+        <div>
+          <strong>30+ Days Irregular</strong>
+          <p>
+            Further calls and letters
+          <br />
+            Debit Interest (Calculated Daily, Charged End of Month)
+          <br  />
+            Demand Notice
+          <br />
+            Referral to Care Partner
+          </p>
+        </div>
+
+        <div>
+          <strong>Demand Notice Issued / Referred to Care Partner</strong>
+          <p>
+            Refer account to relevant Care Partner unless sensitive and complex case or customer requests hardship.
+          </p>
+        </div>
+
+        <div>
+          <strong>Demand Notice Scripting</strong>
+          <p>
+            Once a demand notice is issued the full balance is due and payable within 7 days of as of date of issue of letter. If the balance is not paid in full the account may be referred to a care partner and you may be credit listed.
+          </p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
