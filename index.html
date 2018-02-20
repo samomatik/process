@@ -102,10 +102,26 @@
 
   <div class="container notes">
     <h6>Notes</h6>
-      <textarea></textarea>
+    <textarea></textarea>
+    <div class="row">
+      <div class="col">
+        <input class="arrgField" type="text" placeholder="Arrangement Frequency" />
+        <input class="arrgField" type="text" placeholder="Arrangement Amount" />
+        <input class="arrgField" type="text" placeholder="Payment Method" />
+      </div>
+    </div>
   </div>
 
   <div class="container reference">
+
+<div id="textConvert">
+  <p>
+    <input id="before" value="" placeholder="The Number Simplifier"/>
+    <input type="button" value="Replace" id="replacem" onclick="replacer()"/>
+  </p>
+</div>
+
+
     <h6>Outcomes</h6>
 
     <div class="row outcomes">
