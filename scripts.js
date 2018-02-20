@@ -22,6 +22,8 @@ function replacer() {
   var copyText = document.getElementById("before");
   copyText.select();
   document.execCommand("Copy");
+
+  copyText.value = '';
 }
 
 document.getElementById('replacem').onclick = replacer;
