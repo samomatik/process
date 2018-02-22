@@ -76,3 +76,16 @@ h6 {
 .refButton {
   margin: 2px;
 }
+
+.navbar {
+  display: flex;
+  align-self: center;
+  width: 60%;
+}
+.navbar-nav {
+  display:inline-block;
+}
+
+.nav-item {
+  display: inline-block;
+}

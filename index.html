@@ -1,8 +1,11 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 
 <head>
   <title>Process Checklist</title>
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-grid.min.css">
+  <link rel="stylesheet" href="bootstrap-reboot.min.css">
   <script src="jquery-3.3.1.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -12,6 +15,26 @@
 
 <body>
   <script src="bootstrap.min.js"></script>
+
+  <nav class="navbar">
+
+    <h1 class="navbar-brand">The Toolkit</h1>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/go/nabit" target="_blank">NABit</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/go/tallyman" target="_blank">Tallyman</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" target="_blank">Directory</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" target="_blank">Numbers</a>
+      </li>
+    </ul>
+  </nav>
   <div class="container checklist">
 
     <h6>Call Opening</h6>
@@ -120,8 +143,8 @@
 
 <div id="textConvert">
   <p>
-    <input id="before" value="" placeholder="The Number Simplifier"/>
-    <input type="button" value="Replace" id="replacem" onclick="replacer()"/>
+    <input id="before" value="" placeholder="Enter number here"/>
+    <input type="button" value="Do Magic!" id="replacem" onclick="replacer()"/>
   </p>
 </div>
 

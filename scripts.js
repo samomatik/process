@@ -25,5 +25,3 @@ function replacer() {
 
   copyText.value = '';
 }
-
-document.getElementById('replacem').onclick = replacer;
